@@ -24,13 +24,28 @@ function App() {
   const deleteUser =(id) => {
    setUserList(userList.filter(item => (item.id !== id)))
   }
+  const [editUserItem,setEditUserItem] = useState(null)
+
+  const editUser = (id) => {
+   console.log("edit id --"+id)
+   console.log(userList.find(item => (item.id === id)))
+   setEditUserItem(userList.find(item => (item.id === id)))
+  }
+
+  const handleUpdateUser = (updateUser) => {
+    setUserList(
+      userList.map(item => (item.id == updateUser.id ? updateUser: item ))
+    )
+    setEditUserItem(null)
+  }
 
   return (
     <>      
       <h1>CRUD - React App</h1>
   
-      <UserForm addUser={handleAdduser}></UserForm>
-      <UserList users={userList} userDelete={deleteUser}></UserList>
+      <UserForm addUser={handleAdduser} editUserItem={editUserItem} updateUser={handleUpdateUser}></UserForm>
+      <UserList users={userList} userDelete={deleteUser} userEdit={editUser}></UserList>
+      
     </>
   )
 }

@@ -1,15 +1,24 @@
 import React from "react";
 import { useState } from "react";
 
-const UserForm = ({addUser}) => {
+const UserForm = ({addUser,editUserItem,updateUser}) => {
 
     const[users,setUsers] = useState({name:'',emailId:''})
+
+    if(editUserItem && users.name === '' && users.emailId === ''){
+        setUsers({name:editUserItem.name,emailId:editUserItem.emailId})
+    }
 
      const handleFormuser = (event) => {
        event.preventDefault();   
        let obj = {name:users.name,emailId:users.emailId}
-       console.log(obj)       
-       addUser(obj)
+       if(editUserItem){
+           updateUser({...users,id:editUserItem.id}) 
+       }
+       else{
+            addUser(obj)
+       }
+       
        setUsers({name:'',emailId:''})
   }
     return (
@@ -25,7 +34,9 @@ const UserForm = ({addUser}) => {
                     onChange={(event) => setUsers({ ...users, emailId: event.target.value })}
                     value={users.emailId}
                 />
-                <button type='submit'>Add User 🙍‍♂️</button>
+                <button type='submit'>
+                    {editUserItem ? 'Edit User ✒️' : 'Add User 🙍‍♂️'}
+                </button>
             </form>
 
         </>
