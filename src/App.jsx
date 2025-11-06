@@ -4,10 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import UserList from './comp/UserList'
 import UserForm from './comp/UserForm'
+import UserEffectDemo from './comp/UserEffectDemo'
+
 
 function App() {
   
-
+  const [editUserItem,setEditUserItem] = useState(null)
   const [userList,setUserList] = useState(
     [
       {id:1,name:'ArjunDass',emailId:'arjun@gmail.com'},
@@ -24,7 +26,7 @@ function App() {
   const deleteUser =(id) => {
    setUserList(userList.filter(item => (item.id !== id)))
   }
-  const [editUserItem,setEditUserItem] = useState(null)
+ 
 
   const editUser = (id) => {
    console.log("edit id --"+id)
@@ -37,6 +39,7 @@ function App() {
       userList.map(item => (item.id == updateUser.id ? updateUser: item ))
     )
     setEditUserItem(null)
+    
   }
 
   return (
@@ -48,12 +51,14 @@ function App() {
         editUserItem={editUserItem} 
         updateUser={handleUpdateUser}>        
       </UserForm>
-      
+
       <UserList 
         users={userList} 
         userDelete={deleteUser} 
         userEdit={editUser}> 
       </UserList>
+
+      <UserEffectDemo/>
       
     </>
   )
