@@ -15,8 +15,11 @@ const UserForm = ({addUser,editUserItem,updateUser}) => {
        if(editUserItem){
            updateUser({...users,id:editUserItem.id}) 
        }
-       else{
+       else if(users.name !== '' && users.emailId !== ''){
             addUser(obj)
+       }
+       else{
+        console.warn("users input is empty")
        }
        
        setUsers({name:'',emailId:''})
@@ -28,11 +31,13 @@ const UserForm = ({addUser,editUserItem,updateUser}) => {
                     placeholder='Enter Name'
                     onChange={(event) => setUsers({ ...users, name: event.target.value })}
                     value={users.name}
+                    required
                 />
                 <input type="email"
                     placeholder='Enter email'
                     onChange={(event) => setUsers({ ...users, emailId: event.target.value })}
                     value={users.emailId}
+                    required
                 />
                 <button type='submit'>
                     {editUserItem ? 'Edit User ✒️' : 'Add User 🙍‍♂️'}

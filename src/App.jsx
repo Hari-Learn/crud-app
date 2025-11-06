@@ -43,8 +43,17 @@ function App() {
     <>      
       <h1>CRUD - React App</h1>
   
-      <UserForm addUser={handleAdduser} editUserItem={editUserItem} updateUser={handleUpdateUser}></UserForm>
-      <UserList users={userList} userDelete={deleteUser} userEdit={editUser}></UserList>
+      <UserForm 
+        addUser={handleAdduser} 
+        editUserItem={editUserItem} 
+        updateUser={handleUpdateUser}>        
+      </UserForm>
+      
+      <UserList 
+        users={userList} 
+        userDelete={deleteUser} 
+        userEdit={editUser}> 
+      </UserList>
       
     </>
   )
