@@ -6,6 +6,7 @@ import UserList from './comp/UserList'
 import UserForm from './comp/UserForm'
 import UserEffectDemo from './comp/UserEffectDemo'
 import UseEffectWithoutDependencyArray from './comp/UseEffectWithoutDependencyArray'
+import UseEffectEmptyArray from './comp/UseEffectEmptyArray'
 
 
 function App() {
@@ -62,7 +63,9 @@ function App() {
       {/* <UserEffectDemo/> */}
 
       <UseEffectWithoutDependencyArray/>
+
       
+      <UseEffectEmptyArray></UseEffectEmptyArray>
     </>
   )
 }
