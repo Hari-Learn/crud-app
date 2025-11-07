@@ -5,6 +5,7 @@ import './App.css'
 import UserList from './comp/UserList'
 import UserForm from './comp/UserForm'
 import UserEffectDemo from './comp/UserEffectDemo'
+import UseEffectWithoutDependencyArray from './comp/UseEffectWithoutDependencyArray'
 
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
 
   return (
     <>      
-      <h1>CRUD - React App</h1>
+      <h1>🧡❤️ CRUD - React App ❤️🧡</h1>
   
       <UserForm 
         addUser={handleAdduser} 
@@ -58,7 +59,9 @@ function App() {
         userEdit={editUser}> 
       </UserList>
 
-      <UserEffectDemo/>
+      {/* <UserEffectDemo/> */}
+
+      <UseEffectWithoutDependencyArray/>
       
     </>
   )

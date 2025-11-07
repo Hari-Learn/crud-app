@@ -11,8 +11,7 @@ const UserEffectDemo = () =>{
         <>
         <h1>Gotcha : {count}</h1>
         <button onClick={()=>(setCount(count+1))}>
-        +1
-        </button>
+        +1 </button>
         </>
     )
 }
