@@ -19,3 +19,6 @@ const UseEffectEmptyArray = () => {
 }
 
 export default UseEffectEmptyArray
+
+//[] means “run once on mount.”
+//Updates to state or props do not trigger the effect again.
