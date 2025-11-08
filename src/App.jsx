@@ -9,6 +9,7 @@ import UseEffectWithoutDependencyArray from './comp/UseEffectWithoutDependencyAr
 import UseEffectEmptyArray from './comp/UseEffectEmptyArray'
 import UseEffectWhenStateChange from './comp/UseEffectWhenStateChange'
 import Student from './comp/Student'
+import StudentBtn from './comp/StudentBtn'
 
 
 function App() {
@@ -46,6 +47,10 @@ function App() {
     
   }
 
+  const handleClick = () => {
+    alert("Btn click handled from App to comp")
+  }
+
   return (
     <>      
       <h1>🧡❤️ CRUD - React App ❤️🧡</h1>
@@ -71,7 +76,9 @@ function App() {
 
       <UseEffectWhenStateChange></UseEffectWhenStateChange>
     
-      <Student name="WWS" class="12th" age="18"></Student>
+      <Student name="WWS" class="12th" age={18}></Student>
+
+      <StudentBtn handleClick = {handleClick}></StudentBtn>
     </>
   )
 }
