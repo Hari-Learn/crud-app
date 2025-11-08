@@ -8,6 +8,7 @@ import UserEffectDemo from './comp/UserEffectDemo'
 import UseEffectWithoutDependencyArray from './comp/UseEffectWithoutDependencyArray'
 import UseEffectEmptyArray from './comp/UseEffectEmptyArray'
 import UseEffectWhenStateChange from './comp/UseEffectWhenStateChange'
+import Student from './comp/Student'
 
 
 function App() {
@@ -69,6 +70,8 @@ function App() {
       <UseEffectEmptyArray></UseEffectEmptyArray>
 
       <UseEffectWhenStateChange></UseEffectWhenStateChange>
+    
+      <Student name="WWS" class="12th" age="18"></Student>
     </>
   )
 }
