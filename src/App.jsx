@@ -10,6 +10,7 @@ import UseEffectEmptyArray from './comp/UseEffectEmptyArray'
 import UseEffectWhenStateChange from './comp/UseEffectWhenStateChange'
 import Student from './comp/Student'
 import StudentBtn from './comp/StudentBtn'
+import UseRefDemo from './comp/UseRefDemo'
 
 
 function App() {
@@ -71,6 +72,8 @@ function App() {
       </UserList>
 
       {/* <UserEffectDemo/> */}
+
+      <UseRefDemo></UseRefDemo>
 
       <UseEffectWithoutDependencyArray/>
 

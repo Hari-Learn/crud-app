@@ -1,8 +1,11 @@
 import React from "react";
 
-const StudentBtn = (props) => {
+const StudentBtn = (props) => { 
     return(
-        <button style={{marginLeft:"10px"}} onClick={props.handleClick}>{props.name}</button>
+        <>
+            <button style={{marginLeft:"10px"}} onClick={props.handleClick}>{props.name}</button>
+            <button>Data flow from comp to App</button>
+        </>
     )
 
 }
