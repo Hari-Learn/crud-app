@@ -2,7 +2,7 @@ import React from "react";
 
 const StudentBtn = (props) => {
     return(
-        <button onClick={props.handleClick}>Gotcha</button>
+        <button style={{marginLeft:"10px"}} onClick={props.handleClick}>{props.name}</button>
     )
 
 }

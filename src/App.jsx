@@ -50,6 +50,9 @@ function App() {
   const handleClick = () => {
     alert("Btn click handled from App to comp")
   }
+  const handleClickOne = () => {
+    alert("Reuablity of Btn click handled from App to comp")
+  }
 
   return (
     <>      
@@ -78,7 +81,9 @@ function App() {
     
       <Student name="WWS" class="12th" age={18}></Student>
 
-      <StudentBtn handleClick = {handleClick}></StudentBtn>
+      <StudentBtn handleClick = {handleClick} name="General Btn"></StudentBtn>
+
+      <StudentBtn handleClick = {handleClickOne} name="Reusability Btn"></StudentBtn>
     </>
   )
 }
