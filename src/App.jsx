@@ -11,6 +11,7 @@ import UseEffectWhenStateChange from './comp/UseEffectWhenStateChange'
 import Student from './comp/Student'
 import StudentBtn from './comp/StudentBtn'
 import UseRefDemo from './comp/UseRefDemo'
+import UseLayoutEffect from './comp/UseLayoutEffect'
 
 
 function App() {
@@ -72,6 +73,8 @@ function App() {
       </UserList>
 
       {/* <UserEffectDemo/> */}
+
+      <UseLayoutEffect></UseLayoutEffect>
 
       <UseRefDemo></UseRefDemo>
 
